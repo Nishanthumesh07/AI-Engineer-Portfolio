@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineer Portfolio - Nishanth U</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Apply Inter font globally -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* GitHub Dark Theme Background */
+            color: #e6edf3;
+            scroll-behavior: smooth;
+        }
+        /* Custom Glowing/Gradient Vibe */
+        .glow-text {
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+        .gradient-border {
+            border-image: linear-gradient(45deg, #14b8a6, #3b82f6);
+            border-image-slice: 1;
+            border-width: 2px;
+            border-style: solid;
+        }
+        /* Apply card-hover to the anchor tag wrappers */
+        .card-link {
+            display: block;
+            background-color: #1f2937; /* Slightly lighter background for the card body */
+            border: 1px solid #374151; /* Default border */
+        }
+        .card-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(20, 184, 166, 0.2);
+            border-color: #14b8a6;
+        }
+        /* Custom Scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #161b22;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-teal-400 glow-text">Vibe Coding AI Showcase</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#home" class="text-gray-300 hover:text-white transition duration-150 p-2 rounded-md hover:bg-gray-700">Home</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition duration-150 p-2 rounded-md hover:bg-gray-700">Projects</a>
+                    <a href="#recommender" class="text-gray-300 hover:text-white transition duration-150 p-2 rounded-md hover:bg-gray-700">Recommender</a>
+                    <a href="#tools" class="text-gray-300 hover:text-white transition duration-150 p-2 rounded-md hover:bg-gray-700">Tools</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition duration-150 p-2 rounded-md hover:bg-gray-700">About Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Home Section -->
+        <section id="home" class="h-[80vh] flex flex-col justify-center items-center text-center">
+            <h1 class="text-6xl sm:text-7xl font-extrabold mb-4">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 glow-text">AI Engineer Portfolio</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-400 mb-8 max-w-3xl">
+                Showcasing high-impact projects built using the **Gemini API**, **Next.js**, and **Odoo** to solve real-world development and business challenges.
+            </p>
+            <a href="#projects" class="px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 transition duration-300 shadow-xl transform hover:scale-105">
+                View Projects
+                <i data-lucide="arrow-right" class="inline w-5 h-5 ml-2"></i>
+            </a>
+        </section>
+
+        <!-- Projects Section (01) - Clean Directory -->
+        <section id="projects" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">01. Major Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: AI Influencer Tracker -->
+                <a href="#tracker-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="compass" class="w-8 h-8 text-teal-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">AI Influencer Tracker</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Automated tool for scraping, analyzing sentiment, and benchmarking tech influencers using LLMs and data visualization. (Demo Available)
+                        </p>
+                        
+                    </div>
+                </a>
+
+                <!-- Project Card 2: Stack Showdown -->
+                <a href="#showdown-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="git-branch" class="w-8 h-8 text-blue-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white"> Stack Showdown — MERN vs Next.js, Remix, and Astro for AI Apps</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            A real-time, grounded comparison engine for developer frameworks, ensuring objective, up-to-date data. (Demo Available)
+                        </p>
+                        
+                    </div>
+                </a>
+
+                <!-- Project Card 3: AI Content Forge -->
+                <a href="#forge-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="feather" class="w-8 h-8 text-purple-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">AI Content Forge — Write SEO-Friendly Technical Content for ORANTS Website</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Multi-modal generation pipeline producing marketing assets (text, images, code snippets) at scale. (Demo Available)
+                        </p>
+                       
+                    </div>
+                </a>
+
+                <!-- Project Card 4: Vibe Coding Sprint -->
+                <a href="#sprint-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="layout-grid" class="w-8 h-8 text-yellow-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Vibe Coding Sprint</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Architecture design and integration of Odoo ERP with a modern developer education platform backend. (Demo Available)
+                        </p>
+                        
+                    </div>
+                </a>
+                
+                <!-- Project Card 5: Data Science Specialization (NEW) -->
+                <a href="#datascience-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="bar-chart-3" class="w-8 h-8 text-orange-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Data Science Specialization</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Foundational projects in statistical analysis, predictive modeling, and data manipulation using Python and R. (Certificate & Report Only)
+                        </p>
+                        
+                    </div>
+                </a>
+
+                <!-- Project Card 6: Vibe Coding Platform Mastery (NEW) -->
+                <a href="#vbecoding-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="code-square" class="w-8 h-8 text-pink-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Vibe Coding With Google: AI-Powered Application Development</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+built a complete smart assistant app and the skills to keep building on your own. From prompt engineering to rapid deployment, you’ll be ready to apply what you’ve learned to real-world problems.                        </p>
+                        
+                    </div>
+                </a>
+
+                <!-- Project Card 7: Professional Video Production -->
+                <a href="#video-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="film" class="w-8 h-8 text-slate-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">professional video profile including intro, skills, AI projects, and goals</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Production of a high-quality, professional video module designed to communicate complex intro, skills, AI projects, and goals to a general audience. (Demo Available)
+                        </p>
+                        
+                    </div>
+                </a>
+
+                <!-- Project Card 8: Automation Arena (NEW) -->
+                <a href="#automation-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="bot" class="w-8 h-8 text-lime-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Automation Arena: AI Content Posting</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            MLOps pipeline for automated content generation, review, scheduling, and deployment to social media platforms. (Demo Available)
+                        </p>
+                        
+                    </div>
+                </a>
+
+                <!-- Project Card 9: Autonomous AI Agent (NEW ADDITION) -->
+                <a href="#agent-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="user-cog" class="w-8 h-8 text-emerald-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Autonomous AI Agent</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+AI Agent that can scan existing content (like blogs, articles, or videos) and repurpose it into new formats such as summaries, LinkedIn posts, tweets, or short scripts.
+                        </p>
+                       
+                    </div>
+                </a>
+
+                <!-- Project Card 10: Viral Content Replicator (NEW ADDITION) -->
+                <a href="#replicator-demo" class="card-link p-6 rounded-xl transition duration-300 gradient-border group">
+                    <div class="flex flex-col h-full">
+                        <i data-lucide="activity" class="w-8 h-8 text-red-400 mb-3 group-hover:text-white transition duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Viral Content Replicator</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+Recreate or simulate a viral AI-related post using your custom-built AI agent — to understand what makes content trend online and how automation can reproduce similar success.                        </p>
+                        <div class="mt-4 flex justify-start items-center">
+                            <span class="text-xs font-mono text-red-300 bg-gray-700 px-2 py-1 rounded">LLM | A/B Testing | Content Strategy</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- --- DEDICATED DEMO SECTIONS (02) --- -->
+        <!-- These sections contain the image and full documentation links -->
+
+        <!-- DEMO 1: AI Influencer Tracker -->
+        <section id="tracker-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">01. AI Influencer Tracker: Demo & Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+                    This image represents the final dashboard used for real-time data ingestion, LLM sentiment analysis pipeline, and competitive analysis visualization.
+                </p>
+                <!-- PROJECT PHOTO AREA -->
+                <div class="w-full aspect-video bg-gray-900 border border-gray-700 rounded-lg mb-6 overflow-hidden">
+                    <img src="t 6 p.png" 
+                         alt="Screenshot of AI Influencer Tracker Dashboard" 
+                         class="w-full h-full object-cover" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/700x400/1e293b/a5f3fc?text=Image+Load+Error';"/>
+                </div>
+                <!-- LIVE LINK & DOCUMENTATION LINKS (UPDATED FOR MULTIPLE PDFs) -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Primary Action (Demo) -->
+                    <a href="t 6 v.mp4" target="_blank" class="px-4 py-2 font-semibold rounded-lg bg-teal-600 hover:bg-teal-700 transition duration-300 flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i> View Demo Video
+                    </a>
+                    
+                    <!-- Documentation Links Container -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="t 6 AI_Influencer_Tool_Report_n8n (1).pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Workflow
+                        </a>
+                        <a href="t 6 AI_Influencer_Tracker_Analysis_Report (1).pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="monitor" class="w-4 h-4 mr-2"></i> Platform Analysis Report
+                        </a>
+                        <a href="t 6 analysis generated by n8n.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Output
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 2: Stack Showdown -->
+        <section id="showdown-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">02. Stack Showdown — MERN vs Next.js, Remix, and Astro for AI Apps: Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+Comparison Report and  Recommendation Document  of different web tech stacks — MERN, Next.js, Remix, and Astro            </p>
+                <!-- PROJECT PHOTO AREA -->
+            
+                <!-- LIVE LINK & DOCUMENTATION LINKS (UPDATED FOR MULTIPLE PDFs) -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Primary Action (Demo) -->
+                    
+                    <!-- Documentation Links Container -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="t 7 Comparison Report.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Comparison Report
+                        </a>
+                        <a href="t 7 recomendation.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="monitor" class="w-4 h-4 mr-2"></i> Recomendation Report
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 3: AI Content Forge -->
+        <section id="forge-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">03. AI Content Forge: Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+                    This image represents the multi-modal workflow output, showing a generated asset (text and image) created at scale using Imagen 3.0.
+                </p>
+                <!-- PROJECT PHOTO AREA -->
+                <div class="w-full aspect-video bg-gray-900 border border-gray-700 rounded-lg mb-6 overflow-hidden">
+                    <img src="t 8.jpg" 
+                         alt="Screenshot of AI Content Forge generated image" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/700x400/1e293b/a5f3fc?text=Image+Load+Error';"/>
+                </div>
+                <!-- LIVE LINK & DOCUMENTATION LINKS (UPDATED FOR MULTIPLE PDFs) -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Primary Action (Demo) -->
+                    
+                    
+                    <!-- Documentation Links Container -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="t 8.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Technical Report
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 4: Vibe Coding Sprint -->
+        <section id="sprint-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">04.Vibe Coding Sprint — a Mobile App Using AI Vibe Coding: Demo & Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+                    This image illustrates the final architecture diagram and key Odoo data models designed for the developer education platform backend integration.
+                </p>
+                <!-- PROJECT PHOTO AREA -->
+                <div class="w-full aspect-video bg-gray-900 border border-gray-700 rounded-lg mb-6 overflow-hidden">
+                    <img src="t 9.jpg" 
+                         alt="Architecture Diagram for Odoo Integration" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/700x400/1e293b/a5f3fc?text=Image+Load+Error';"/>
+                </div>
+                <!-- LIVE LINK & DOCUMENTATION LINKS (UPDATED FOR MULTIPLE PDFs) -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Primary Action (Demo) -->
+        
+                    
+                    <!-- Documentation Links Container -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="task 9.zip" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> project folder(zip)
+                        </a>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 5: Data Science Specialization (Certificate Only) -->
+        <section id="datascience-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">05. Data Science Specialization: Certificate Only</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+                    This section serves as a record of the capstone project completed for the specialization. Use the link below to verify the credential.
+                </p>
+                <!-- ARTIFACT AREA -->
+                <div class="bg-gray-900 border border-gray-700 rounded-lg flex items-center justify-center p-8 mb-6">
+                    <div class="text-center">
+                        <i data-lucide="award" class="w-12 h-12 text-orange-400 mb-2 mx-auto"></i>
+                        <p class="text-gray-400 font-semibold">Project Artifact Available</p>
+                        <p class="text-sm text-gray-500 mt-1">The certificate validates the hands-on experience gained in data science fundamentals.</p>
+                    </div>
+                </div>
+                <!-- LINKS -->
+                <div class="flex justify-center">
+                    <a href="t 1.pdf" target="_blank" class="px-4 py-2 font-semibold rounded-lg bg-orange-600 hover:bg-orange-700 transition duration-300 flex items-center">
+                        <i data-lucide="external-link" class="w-5 h-5 mr-2"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 6: Vibe Coding Platform Mastery (Certificate Only) -->
+        <section id="vbecoding-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">06.Vibe Coding With Google: AI-Powered Application Development: Certificate Only</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+Vibe Coding with Google: AI-Powered Application Development! I’m Prof. Reza (Dr. Reza Moradinezhad), an AI scientist and educator with over a decade of experience in computer science and AI—having worked alongside teams at MIT Media Lab, CMU, and Harvard.                </p>
+                <!-- ARTIFACT AREA -->
+                <div class="bg-gray-900 border border-gray-700 rounded-lg flex items-center justify-center p-8 mb-6">
+                    <div class="text-center">
+                        <i data-lucide="code-square" class="w-12 h-12 text-pink-400 mb-2 mx-auto"></i>
+                        <p class="text-gray-400 font-semibold">Project Artifact Available</p>
+                        <p class="text-sm text-gray-500 mt-1">The certificate validates completion of the full-stack capstone.</p>
+                    </div>
+                </div>
+                <!-- LINKS -->
+                <div class="flex justify-center">
+                    <a href="t 3.pdf" target="_blank" class="px-4 py-2 font-semibold rounded-lg bg-pink-600 hover:bg-pink-700 transition duration-300 flex items-center">
+                        <i data-lucide="external-link" class="w-5 h-5 mr-2"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 7: Professional Video Project: AI Concepts -->
+        <section id="video-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">07. professional video profile including intro, skills, AI projects, and goals: Demo & Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+                    This is a high-quality, professional video module designed to communicate complex AI concepts,skills,intro to a general audience.
+                </p>
+                <!-- PROJECT PHOTO AREA -->
+                
+                <!-- LIVE LINK & DOCUMENTATION LINKS (ONLY VIEW FULL VIDEO REMAINS) -->
+                <div class="flex justify-center">
+                    <a href="t 2.mp4" target="_blank" class="px-4 py-2 font-semibold rounded-lg bg-teal-600 hover:bg-teal-700 transition duration-300 flex items-center">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i> View Full Video
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- DEMO 8: Automation Arena (NEW) -->
+        <section id="automation-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">08. Automation Arena: AI Content Posting: Demo & Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+                    This image shows ChatGPT generates content → n8n posts it to LinkedIn → data gets saved to Google Sheets </p>
+                <!-- PROJECT PHOTO AREA -->
+                <div class="w-full aspect-video bg-gray-900 border border-gray-700 rounded-lg mb-6 overflow-hidden">
+                    <img src="t 4 .png" 
+                         alt="Screenshot of MLOps Pipeline Dashboard" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/700x400/1e293b/a5f3fc?text=Image+Load+Error';"/>
+                </div>
+                <!-- LIVE LINK & DOCUMENTATION LINKS (UPDATED FOR MULTIPLE PDFs) -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Primary Action (Demo) -->
+                    <a href="t 4 linkedin post.mp4" target="_blank" class="px-4 py-2 font-semibold rounded-lg bg-teal-600 hover:bg-teal-700 transition duration-300 flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i> View Demo Video
+                    </a>
+                    
+                    <!-- Documentation Links Container -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="t 4 document gumloop.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Report
+                        </a>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 9: Autonomous AI Agent (NEW ADDITION) -->
+        <section id="agent-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">09. Autonomous AI Agent: Demo & Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+                    This image displays the Workflow of Ai agent.
+                </p>
+                <!-- PROJECT PHOTO AREA -->
+                <div class="w-full aspect-video bg-gray-900 border border-gray-700 rounded-lg mb-6 overflow-hidden">
+                    <img src="t 5 .png" 
+                         alt="Screenshot of AI Agent Reasoning Chain" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/700x400/1e293b/a5f3fc?text=Image+Load+Error';"/>
+                </div>
+                <!-- LIVE LINK & DOCUMENTATION LINKS -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Primary Action (Demo) -->
+                    <a href="t 5 ai.mp4" target="_blank" class="px-4 py-2 font-semibold rounded-lg bg-teal-600 hover:bg-teal-700 transition duration-300 flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i> View Demo Video
+                    </a>
+                    
+                    <!-- Documentation Links Container -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="C:\Users\Smart User\Desktop\website\t 5 document.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Report
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO 10: Viral Content Replicator (NEW ADDITION) -->
+        <section id="replicator-demo" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">10. Viral Content Replicator: Details</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                <p class="text-gray-400 mb-6 text-center">
+A polished, SEO-friendly, and engagement-optimized AI-generated post ready to publish.It should look human-like, insightful, and shareable — not robotic.                </p>
+                <!-- PROJECT PHOTO AREA -->
+                <div class="w-full aspect-video bg-gray-900 border border-gray-700 rounded-lg mb-6 overflow-hidden">
+                    <img src="t 10.png" 
+                         alt="Screenshot of Viral Content Replicator Dashboard" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/700x400/1e293b/a5f3fc?text=Image+Load+Error';"/>
+                </div>
+                <!-- LIVE LINK & DOCUMENTATION LINKS -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Primary Action (Demo) -->
+                    
+                    <!-- Documentation Links Container -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="t 10.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Technical Write-up
+                        </a>
+                        <a href="t 10 a.pdf" target="_blank" class="px-3 py-2 font-semibold rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300 flex items-center justify-center text-sm">
+                            <i data-lucide="monitor" class="w-4 h-4 mr-2"></i> LinkedIn Post
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Interactive Element: Project Recommender Chatbot (03) -->
+        <section id="recommender" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">03. Project Recommender</h2>
+            <div class="max-w-md mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl gradient-border">
+                <p class="text-gray-300 mb-4">
+                    **Ask me a question** about what kind of project you're interested in, and I'll recommend the best fit!
+                </p>
+                <div class="flex space-x-2">
+                    <input type="text" id="recommendation-input" placeholder="e.g., 'data analysis' or 'content creation'"
+                        class="flex-1 p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-teal-500 focus:border-teal-500 placeholder-gray-500 text-white">
+                    <button onclick="getRecommendation()"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200">
+                        Recommend
+                    </button>
+                </div>
+                <div id="recommendation-output" class="mt-6 p-4 bg-gray-700 border-l-4 border-teal-400 rounded-lg min-h-[4rem]">
+                    <p class="text-teal-400">Recommendation appears here...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section (04) -->
+       <section id="tools" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400"> AI & Tech Stack</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6 text-center">
+                
+                <!-- Row 1: AI & Cloud Services (7 items) -->
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-teal-900/40 transition duration-300">
+                    <i data-lucide="sparkles" class="w-6 h-6 text-teal-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Gemini API</p>
+                </div>
+                
+                
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-yellow-900/40 transition duration-300">
+                    <i data-lucide="file-text" class="w-6 h-6 text-yellow-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Next.js</p>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-red-900/40 transition duration-300">
+                    <i data-lucide="database-zap" class="w-6 h-6 text-red-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Firestore</p>
+                </div>
+                <!-- NEW: Google Firebase -->
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-orange-600/40 transition duration-300">
+                    <i data-lucide="flame" class="w-6 h-6 text-orange-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Firebase</p>
+                </div>
+                
+                
+                <!-- Row 2: Dev Ops, Automation & Core Languages (7 items) -->
+                
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-emerald-900/40 transition duration-300">
+                    <i data-lucide="workflow" class="w-6 h-6 text-emerald-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">N8N</p>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-pink-900/40 transition duration-300">
+                    <i data-lucide="rocket" class="w-6 h-6 text-pink-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Gumloop</p>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-orange-900/40 transition duration-300">
+                    <i data-lucide="brain" class="w-6 h-6 text-orange-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Hugging Face</p>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-sky-900/40 transition duration-300">
+                    <i data-lucide="terminal-square" class="w-6 h-6 text-sky-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Python</p>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-amber-900/40 transition duration-300">
+                    <i data-lucide="coffee" class="w-6 h-6 text-amber-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Java</p>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-violet-900/40 transition duration-300">
+                    <i data-lucide="database" class="w-6 h-6 text-violet-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">SQL</p>
+                </div>
+
+                <!-- Row 3: Frontend & Specialization (5 items) -->
+                <!-- NEW: React -->
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-cyan-900/40 transition duration-300">
+                    <i data-lucide="atom" class="w-6 h-6 text-cyan-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">React</p>
+                </div>
+                <!-- NEW: HTML -->
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-red-700/40 transition duration-300">
+                    <i data-lucide="code" class="w-6 h-6 text-red-500 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">HTML</p>
+                </div>
+                <!-- NEW: CSS -->
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-blue-700/40 transition duration-300">
+                    <i data-lucide="paint-roller" class="w-6 h-6 text-blue-500 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">CSS</p>
+                </div>
+                <!-- NEW: Vibe Coding -->
+                <div class="p-4 bg-gray-800 rounded-lg shadow-xl hover:bg-fuchsia-900/40 transition duration-300">
+                    <i data-lucide="heart-handshake" class="w-6 h-6 text-fuchsia-400 mx-auto mb-2"></i>
+                    <p class="text-sm font-semibold">Vibe Coding</p>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <!-- About Me Section (05) -->
+        <section id="about" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">05. About Me</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-400 mb-6">
+                    I am a passionate AI Engineer focused on bridging the gap between cutting-edge LLMs and practical business applications. This internship has been a deep dive into MLOps principles, multi-modal workflows, and scalable cloud-native architectures.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/nishanth-u-b33617312/" target="_blank" class="flex items-center text-blue-400 hover:text-blue-300">
+                        <i data-lucide="linkedin" class="w-6 h-6 mr-2"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Nishanthumesh07" target="_blank" class="flex items-center text-white hover:text-gray-300">
+                        <i data-lucide="github" class="w-6 h-6 mr-2"></i> GitHub
+                    </a>
+                    <a href="mailto:Nishanthumesh07@gmail.com" class="flex items-center text-teal-400 hover:text-teal-300">
+                        <i data-lucide="mail" class="w-6 h-6 mr-2"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            &copy; 2025 Nishanth U | AI Portfolio Showcase | Built with Vibe Coding
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Project Recommendation Logic
+        function getRecommendation() {
+            const input = document.getElementById('recommendation-input').value.toLowerCase();
+            const output = document.getElementById('recommendation-output');
+            let recommendation = "";
+
+            // New logic for AI Agent and Viral Replicator
+            if (input.includes("agent") || input.includes("autonomous") || input.includes("planning") || input.includes("tools")) {
+                recommendation = "You're focused on **autonomous systems**! Check out the **Autonomous AI Agent** project (02.9) which demonstrates complex tool use and self-correction.";
+            } else if (input.includes("viral") || input.includes("growth") || input.includes("replicator") || input.includes("social")) {
+                recommendation = "You're interested in **content virality and strategy**! The **Viral Content Replicator** project (02.10) showcases LLM-driven A/B testing and optimization.";
+            } 
+            // Existing logic
+            else if (input.includes("automation") || input.includes("posting") || input.includes("scheduling") || input.includes("mlops")) {
+                 recommendation = "You're interested in **MLOps and automation**! Check out the **Automation Arena: AI Content Posting** project (02.8) which features a complete autonomous content deployment pipeline.";
+            } else if (input.includes("video") || input.includes("media") || input.includes("communication")) {
+                recommendation = "You're focused on **professional communication**! The **Professional Video Project** (02.7) is exactly what you need to see, showcasing high-quality content production.";
+            } else if (input.includes("data") || input.includes("analysis") || input.includes("metric") || input.includes("tracker")) {
+                recommendation = "You seem interested in **data and insights**! Check out the **AI Influencer Tracker** project (02.1) or the **Data Science Specialization** project (02.5) for detailed analysis reports.";
+            } else if (input.includes("stack") || input.includes("comparison") || input.includes("frameworks") || input.includes("tech")) {
+                recommendation = "You're looking for an **objective tech review**! The **Stack Showdown** project (02.2) demonstrates powerful Google Grounding for real-time comparisons.";
+            } else if (input.includes("content") || input.includes("image") || input.includes("generate") || input.includes("marketing")) {
+                recommendation = "You need **creative scale**! The **AI Content Forge** (02.3) showcases multi-modal generation (text and image) using the Imagen API.";
+            } else if (input.includes("enterprise") || input.includes("odoo") || input.includes("architecture") || input.includes("deployment")) {
+                recommendation = "You're focused on **enterprise solutions**! The **Vibe Coding Sprint** (02.4) or **Vibe Coding Mastery Project** (02.6) details architecture and deployment planning.";
+            } else if (input.includes("full-stack") || input.includes("devops") || input.includes("code")) {
+                recommendation = "For a deep dive into **full-stack and architecture**, look at the **Vibe Coding Mastery Project** (02.6) for the final repository and report!";
+            } else {
+                recommendation = "I recommend exploring the **Major Projects** section. There are now ten projects covering MLOps, architecture, data science, agents, and viral content strategies!";
+            }
+
+            output.innerHTML = `<p class="text-white">${recommendation}</p>`;
+        }
+
+        // Simple smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // We prevent default behavior only if it is an internal hash link
+                if (this.getAttribute('target') !== '_blank') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                
+            });
+        });
+    </script>
+</body>
+</html>
